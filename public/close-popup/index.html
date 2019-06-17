@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta 
+    charset="UTF-8"
+    content="font-src: 'self' data: img-src 'self' data: default-src 'self'"
+  />
+  <title>Close Popup</title>
+  <script src="https://cdn.auth0.com/js/auth0/9.8.1/auth0.min.js"></script>
+
+</head>
+<body>
+  <script type="text/javascript">
+        const webAuth = new auth0.WebAuth({
+          domain: process.env.TEST_DOM,
+          clientID: process.env.TEST_CID
+        });
+        webAuth.popup.callback();
+  </script>
+</body>
+</html>
